@@ -40,24 +40,6 @@
             "title": "Não há dados suficientes para uma resposta significativa."
           }
         ]
-      },
-      {
-        "title": "Como reverter a entropia?",
-        "answers": [
-          {
-            "title": "Para de usar droga, mano. Isso é um app pra aprender Flutter..."
-        },
-        {
-            "title": "Com naves espaciais."
-        },
-        {
-            "title": "Faça-se a luz!",
-            "isRight": true
-          },
-          {
-            "title": "Não há dados suficientes para uma resposta significativa."
-          }
-        ]
       }
     ]
   }
