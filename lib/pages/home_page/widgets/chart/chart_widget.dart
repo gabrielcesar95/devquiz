@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:DevQuiz/core/core.dart';
+import 'package:dev_quiz/core/core.dart';
 
 class ChartWidget extends StatefulWidget {
   final double percent;

@@ -1,6 +1,6 @@
-import 'package:DevQuiz/challenge/widgets/answer/answer_widget.dart';
-import 'package:DevQuiz/core/core.dart';
-import 'package:DevQuiz/shared/models/question_model.dart';
+import 'package:dev_quiz/core/core.dart';
+import 'package:dev_quiz/pages/challenge_page/widgets/answer/answer_widget.dart';
+import 'package:dev_quiz/shared/models/question_model.dart';
 import 'package:flutter/material.dart';
 
 class QuizWidget extends StatefulWidget {

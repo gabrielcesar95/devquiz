@@ -1,6 +1,6 @@
-import 'package:DevQuiz/challenge/widgets/next_button/next_button_widget.dart';
-import 'package:DevQuiz/core/core.dart';
-import 'package:DevQuiz/home/home_page.dart';
+import 'package:dev_quiz/core/core.dart';
+import 'package:dev_quiz/pages/challenge_page/widgets/next_button/next_button_widget.dart';
+import 'package:dev_quiz/pages/home_page/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
