@@ -57,18 +57,12 @@ class _ChallengePageState extends State<ChallengePage> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(86),
         child: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              BackButton(),
-              ValueListenableBuilder<int>(
-                valueListenable: controller.currentPageNotifier,
-                builder: (context, currentPage, _) => QuestionIndicatorWidget(
-                  currentPage: currentPage,
-                  length: widget.questions.length,
-                ),
-              ),
-            ],
+          child: ValueListenableBuilder<int>(
+            valueListenable: controller.currentPageNotifier,
+            builder: (context, currentPage, _) => QuestionIndicatorWidget(
+              currentPage: currentPage,
+              length: widget.questions.length,
+            ),
           ),
         ),
       ),
@@ -83,7 +77,7 @@ class _ChallengePageState extends State<ChallengePage> {
       ),
       bottomNavigationBar: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
           child: ValueListenableBuilder<int>(
             valueListenable: controller.currentPageNotifier,
             builder: (context, currentPage, _) => Row(
@@ -95,21 +89,22 @@ class _ChallengePageState extends State<ChallengePage> {
                       nextPage();
                     }),
                   ),
-                if (currentPage == widget.questions.length) SizedBox(width: 7),
-                Expanded(
-                  child: NextButtonWidget.green('Confirmar', () {
-                    Navigator.pushReplacement(
-                      context,
-                      CupertinoPageRoute(
-                        builder: (context) => ResultPage(
-                          title: widget.title,
-                          length: widget.questions.length,
-                          result: controller.qtdAnswerRight,
+                if (currentPage == widget.questions.length) ...[
+                  Expanded(
+                    child: NextButtonWidget.green('Confirmar', () {
+                      Navigator.pushReplacement(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => ResultPage(
+                            title: widget.title,
+                            length: widget.questions.length,
+                            result: controller.qtdAnswerRight,
+                          ),
                         ),
-                      ),
-                    );
-                  }),
-                ),
+                      );
+                    }),
+                  ),
+                ]
               ],
             ),
           ),
