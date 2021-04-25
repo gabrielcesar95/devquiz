@@ -31,6 +31,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    //TODO: Implement level filtering
+
     if (controller.state == HomeState.success) {
       return Scaffold(
         appBar: AppBarWidget(user: controller.user!),
